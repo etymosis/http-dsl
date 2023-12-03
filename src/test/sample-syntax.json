@@ -1,0 +1,40 @@
+{
+    "outbound":{
+        "verb": "post",
+        "url": "https://example.org",
+        "queryParams": {
+
+        },
+        "headers": {
+            "Authorization": "bearer ${authToken}",
+            "content-type": "application/json",
+            "accept": "application/json"
+        },
+        "body": {
+            "key": "${value}"
+        }
+    },
+    "inbound": {
+        "200": {
+            "someSuccessfulHeaderKey": "${headers.content-length}",
+            "someSuccessfulBodyKey": "${body.responseKey}",
+            "staticValue": "success!"
+        },
+        "500": {
+            "someFailureHeaderKey": "${headers.content-length}",
+            "someFailureBodyKey": "${body.responseKey}",
+            "staticValue": "failure!"
+        },
+        "201": {
+            "properties":{
+                "myKey": {
+                    "type": "string",
+                    "fulfillment": "${}"
+                },
+            }
+        }
+        "default":{
+            "errorMessage": "Something went wrong"
+        }            
+    }   
+}

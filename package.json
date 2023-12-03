@@ -1,0 +1,23 @@
+{
+  "name": "http-dsl",
+  "version": "1.0.0",
+  "description": "DSL for http requests written in typescript",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "test"
+  },
+  "keywords": [
+    "http",
+    "dsl"
+  ],
+  "author": "etymosis",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.2"
+  }
+}
