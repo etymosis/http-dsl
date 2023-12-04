@@ -26,13 +26,14 @@
             "staticValue": "failure!"
         },
         "201": {
+            "type": "object",
             "properties":{
                 "myKey": {
                     "type": "string",
                     "fulfillment": "${}"
-                },
+                }
             }
-        }
+        },
         "default":{
             "errorMessage": "Something went wrong"
         }            
